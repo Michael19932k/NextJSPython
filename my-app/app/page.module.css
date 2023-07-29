@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.header {
+  width: 100vw;
+  background-color: grey;
+  height: 5%;
+}
+
+.footer {
+  width: 100vw;
+  background-color: grey;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 5%;
+}
