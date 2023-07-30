@@ -32,8 +32,11 @@
 5. Usage:
    Make sure the server is running in order to get the data.
    Working directories:
-   - http://localhost:3000/pageIndex // couldn't make the home page at "/index" as index name is reserved by the system.
+   - http://localhost:3000/pageIndex  //couldn't make the home page at "/index" as index name is reserved by the system.
    - http://localhost:3000/postsList
-   - http://localhost:3000/postsList/post?id=1 // id is simmilar to what is contained in the dataset, uses dynamic server functions which are not supported with a static export.
+   - http://localhost:3000/postsList/1  //custom route omitted in favor of static pages build, id directly comes after slash.
    
-Need to implement changes to make the project able to generate a static website.
+6. Static export build:
+    npm run build
+   - generates static pages for each of the existing routes in build instead of on-demand at request time.
+   - my-app/app/out  //direction of the build.
