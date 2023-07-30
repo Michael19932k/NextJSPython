@@ -17,7 +17,7 @@ export const PostList = ({ posts }: Props): ReactElement => {
         <div key={post.id}>
           <div>{post.title}</div>
           <div dangerouslySetInnerHTML={{ __html: post.content }}/>
-          <Link href={`/postsList/post?id=${post.id}`}>
+          <Link href={`/postsList/${post.id}`}>
         Go to full post {post.title}
         </Link>
         </div>

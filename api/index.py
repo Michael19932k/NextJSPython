@@ -1,7 +1,6 @@
-from fastapi import FastAPI
-from fastapi import HTTPException
-app = FastAPI()
+from fastapi import FastAPI, HTTPException
 
+app = FastAPI()
 
 data = [
     {
@@ -39,19 +38,6 @@ async def get_posts():
     }
     return response
 
-
-
-@app.get("/get_hp_data")
-async def get_hp_data():
-    response = {
-        "res": "OK",
-        "data": {
-            "headline": "<h1>Welcome</h1>"
-        }
-    }
-    return response
-
-
 @app.get("/get_hp_data")
 async def get_hp_data():
     response = {
@@ -74,7 +60,6 @@ async def get_post(id: int):
                 "content": post["content"]
             }
         }
+        return response
     else:
         raise HTTPException(status_code=404, detail="Post not found")
-
-    return response

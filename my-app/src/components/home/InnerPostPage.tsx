@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const SinglePage = ({ data }: Props): ReactElement => {
-
+console.log(data,'dataaa')
   if (!data) {
     return <div className="article-preview">No data</div>;
   }
